@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <span>example1</span></br>
+  <div id="example1"></div>
+  <script type="text/babel">
+    const element = <h1>Hello,world!</h1>;
+    ReactDOM.render(
+      element,
+      document.getElementById('example1')
+    )
+  </script>
+  
+  <span>example2</span></br>
+  <div id="example2"></div>
+  <script type="text/babel">
+    function tick() {
+      const element = (
+        <div>
+          <h1>Hello, world!</h1>
+          <h2>现在时间 {new Date().toLocaleTimeString()}.</h2>
+        </div>
+      );
+      ReactDOM.render(
+        element,
+        document.getElementById('example2')
+      )
+    }
+
+    setInterval(tick, 1000);
+  </script>
+  
+  <span>example3</span></br>
+  <div id="example3"></div>
+  <script type="text/babel">
+    function Clock(props) {
+      return (
+        <div>
+          <h1>Hello, world!</h1>
+          <h2>现在时间 {props.date.toLocaleTimeString()}.</h2>
+        </div>
+      );
+    }
+    function tick() {
+      ReactDOM.render(
+        <Clock date={new Date()} />,
+        document.getElementById('example3')
+      )
+    }
+
+    setInterval(tick, 1000);
+  </script>
+  
+  <span>example4</span></br>
+  <div id="example4"></div>
+  <script type="text/babel">
+    class Clock extends React.Component {
+      render() {
+        return (
+          <div>
+            <h1>Hello, world!</h1>
+            <h2>现在时间 {this.props.date.toLocaleTimeString()}.</h2>
+          </div>
+        );
+      }
+    }
+    function tick() {
+      ReactDOM.render(
+        <Clock date={new Date()} />,
+        document.getElementById('example4')
+      )
+    }
+
+    setInterval(tick, 1000);
+  </script>
+</body>
+</html>
