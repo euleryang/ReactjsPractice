@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <span>example1</span></br>
+  <div id="example1"></div>
+  <script type="text/babel">
+    function HelloMessage(props) {
+      return <h1>Hello {props.name}!</h1>;
+    }
+    const element = <HelloMessage name="Runoob" />;
+    ReactDOM.render(
+      element,
+      document.getElementById('example1')
+    )
+  </script>
+
+  <span>example2</span></br>
+  <div id="example2"></div>
+  <script type="text/babel">
+    function Name(props){
+      return <h1>网站名称：{props.name}</h1>;
+    }
+    function Url(props){
+      return <h1>网站网址：{props.url}</h1>;
+    }
+    function NickName(props){
+      return <h1>网站昵称：{props.nickname}</h1>;
+    }
+    function App() {
+    return (
+      <div>
+        <Name name="菜鸟教程" />
+        <Url url="http://www.runoob.com" />
+        <NickName nickname="Runoob" />
+      </div>
+    );
+    }
+
+    ReactDOM.render(
+      <App />,
+      document.getElementById('example2')
+    );
+  </script>
+</body>
+</html>
