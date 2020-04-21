@@ -80,5 +80,28 @@
 
     setInterval(tick, 1000);
   </script>
+  
+  <div id="example5"></div>
+  <script type="text/babel" src="helloworld_react.js"></script>
+  
+  <div id="example6"></div>
+  <script type="text/babel">
+    var myStyle = {
+      fontSize: 50,
+      color: '#FF0000'
+    };
+    var arr = [
+      <h1>菜鸟教程</h1>,
+      <h2>学习的不仅是技术，更是梦想！</h2>
+    ];
+    ReactDOM.render(
+      <div>
+      {/*comment*/}
+      <h1 style = {myStyle}>菜鸟教程</h1>
+      {arr}
+      </div>,
+      document.getElementById('example6')
+    );
+  </script>
 </body>
 </html>
